@@ -56,7 +56,6 @@ function SignUp() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       const newUser = await createUserAccount(values);
-      console.log(newUser);
 
       if (!newUser) {
         toast({ title: "Sign up failed. Please try again." });

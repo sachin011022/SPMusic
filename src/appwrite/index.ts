@@ -1,5 +1,5 @@
 import { ID, Query } from "appwrite";
-import { account, AppwriteConfig, avatars, database } from "./Config";
+import { account, AppwriteConfig, database } from "./Config";
 
 export const signUpUser = async (user: {
   name: string;
@@ -34,14 +34,14 @@ export const saveUserToDB = async (user: {
   name: string;
 }) => {
   try {
-    const newUser = await database.createDocument(
+    const activeUser = await database.createDocument(
       AppwriteConfig.databaseID,
       AppwriteConfig.userCollectionID,
       ID.unique(),
       user
     );
 
-    return newUser;
+    return activeUser;
   } catch (error) {
     console.log(error);
   }

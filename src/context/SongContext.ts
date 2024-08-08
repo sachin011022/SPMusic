@@ -1,6 +1,6 @@
 // SongContext.tsx
 import { PlayerState } from "@/types";
-import { createContext, Dispatch, SetStateAction } from "react";
+import { createContext } from "react";
 // import { MusicPlayerState, MusicPlayerActions } from "@/types";
 export const initialState: PlayerState = {
   currentSongs: [],
