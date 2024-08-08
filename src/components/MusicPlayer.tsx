@@ -1,26 +1,15 @@
-import {
-  ChevronLeft,
-  ChevronRight,
-  PauseCircle,
-  PlayCircle,
-  Repeat,
-  Shuffle,
-  User,
-  Volume2,
-  VolumeX,
-} from "lucide-react";
+import { PauseCircle, PlayCircle } from "lucide-react";
 import React, { useContext, useEffect, useRef, useState } from "react";
-// import song from "@/assets/song.mp3";
+
 import SongContext from "@/context/SongContext";
 import reactLogo from "@/assets/react.svg";
 const MusicPlayer: React.FC = () => {
   const value = useContext(SongContext);
 
   const [rangeValue, setRangeValue] = useState(0);
-  const [volumeValue, setVolumeValue] = useState(0);
+
   const [playToggle, setPlayToggle] = useState(false);
-  const [activeColor, setActiveColor] = useState(false);
-  const [loopColor, setLoopColor] = useState(false);
+
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const songRef = useRef<HTMLAudioElement>(null);
@@ -34,12 +23,12 @@ const MusicPlayer: React.FC = () => {
     }
   };
 
-  const handleToChange = () => {
-    setActiveColor(!activeColor);
-  };
-  const handleLoopColor = () => {
-    setLoopColor(!loopColor);
-  };
+  // const handleToChange = () => {
+  //   setActiveColor(!activeColor);
+  // };
+  // const handleLoopColor = () => {
+  //   setLoopColor(!loopColor);
+  // };
   const handleRangeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = Number(e.target.value);
     setCurrentTime(value);
@@ -127,29 +116,9 @@ const MusicPlayer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className='flex items-center gap-x-3 px-2'>
-        {/* {volumeValue === 0 ? (
-          <VolumeX size={25} className=' cursor-pointer' />
-        ) : (
-          <Volume2 size={25} className=' cursor-pointer' />
-        )}
-        <input
-          value={volumeValue}
-          onChange={(e) => {
-            setVolumeValue(parseFloat(e.target.value));
-            // songRef.current.volume = e.target.value;
-          }}
-          type='range'
-          min={0}
-          max={1}
-          step={0.01}
-          color='#1DB954'
-          className='bg-[#1DB954] cursor-pointer'
-        /> */}
-      </div>
+      <div className='flex items-center gap-x-3 px-2'></div>
     </div>
   );
 };
 
 export default MusicPlayer;
-// 7f477f857b0410a360b350a5309975a2
