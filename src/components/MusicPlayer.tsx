@@ -90,6 +90,7 @@ const MusicPlayer: React.FC = () => {
           <div className='flex items-center gap-x-3 '>
             <audio
               ref={songRef}
+              defaultValue={rangeValue}
               src={value.state.currentSongs?.preview}
               onLoadedMetadata={() =>
                 setDuration(songRef.current?.duration ?? 0)

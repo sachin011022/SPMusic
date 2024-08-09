@@ -35,8 +35,6 @@ function Album() {
     );
   }
 
-  const { setActiveSong } = useContext(SongContext);
-
   // Example usage of state and actions
 
   return (

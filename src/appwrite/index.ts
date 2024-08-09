@@ -16,7 +16,7 @@ export const signUpUser = async (user: {
 
     if (!newAccount) throw Error;
 
-    const newUser = await saveUserToDB({
+    await saveUserToDB({
       accountId: newAccount.$id,
       name: newAccount.name,
       email: newAccount.email,

@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import { z } from "zod";
 
 const formSchema = z.object({
-  search: z.string().min(4).max(20),
+  search: z.string().min(4).max(50),
 });
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -16,7 +16,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { fetchDataSearch } from "@/Api";
+
 import Card from "@/components/Card";
 import { useState } from "react";
 import { useFetchSearch } from "@/react-query/QueryAndMutation";
