@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import SongContext, { initialState } from "./SongContext";
-import { useNavigate } from "react-router-dom";
 import { PlayerState } from "@/types";
 
 const SongDataProvider: React.FC<{ children: React.ReactNode }> = ({
@@ -21,17 +20,7 @@ const SongDataProvider: React.FC<{ children: React.ReactNode }> = ({
       isActive: true,
     }));
   };
-  const navigate = useNavigate();
-  useEffect(() => {
-    const cookieFallback = localStorage.getItem("cookieFallback");
-    if (
-      cookieFallback === "[]" ||
-      cookieFallback === null ||
-      cookieFallback === undefined
-    ) {
-      navigate("/sign-in");
-    }
-  }, []);
+
   const nextSong = (payload: number) => {
     setState((prevState) => ({
       ...prevState,

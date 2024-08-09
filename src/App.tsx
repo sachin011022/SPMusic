@@ -1,7 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 
-import SignUp from "./pages/form/SignUp";
-import SignIn from "./pages/form/SignIn";
 import Container from "./components/Container";
 import { Toaster } from "@/components/ui/toaster";
 import LeftSidebar from "./components/LeftSidebar";
@@ -30,8 +28,6 @@ function App() {
                   <Route path='/' element={<RightMiddle />} />
                   <Route path='/search' element={<SearchPage />} />
                   <Route path='/:value/:id' element={<Album />} />
-                  <Route path='/signup' element={<SignUp />} />
-                  <Route path='/sign-in' element={<SignIn />} />
                 </Routes>
               </div>
             </div>
