@@ -50,9 +50,9 @@ const MusicPlayer: React.FC = () => {
   }, [value.state.currentSongs]);
 
   return (
-    <div className='flex items-center justify-between w-full'>
-      <div className='flex items-center gap-x-3 p-3  w-[350px]'>
-        <div className='size-14 rounded-lg overflow-hidden'>
+    <div className='flex  items-center justify-between w-full bg-black '>
+      <div className=' items-center gap-x-3 p-3 hidden lg:flex w-[350px]'>
+        <div className='lg:size-14  size-7 hidden lg:flex rounded-lg overflow-hidden'>
           <img
             src={value.state.currentSongs?.album?.cover_medium || reactLogo}
             alt='NoSong'
@@ -60,15 +60,15 @@ const MusicPlayer: React.FC = () => {
           />
         </div>
         <div className='flex flex-col w-3/4 '>
-          <h1 className='text-xl  truncate'>
+          <h1 className='lg:text-xl text-sm  truncate'>
             {value.state.currentSongs?.title}
           </h1>
-          <p className='text-[17px] /25 truncate'>
+          <p className='lg:text-[17px] text-[8px] truncate'>
             {value.state.currentSongs?.artist?.name}
           </p>
         </div>
       </div>
-      <div className='flex items-center justify-center w-[608px]'>
+      <div className='flex items-center  justify-center '>
         <div className='w-full flex flex-col items-center justify-center gap-y-2'>
           <div className='w-full flex flex-col items-center justify-center'>
             <div className='flex items-center gap-x-2 text-center '>
@@ -87,7 +87,7 @@ const MusicPlayer: React.FC = () => {
               )}
             </div>
           </div>
-          <div className='flex items-center gap-x-3 '>
+          <div className='flex items-center gap-x-3 w-full'>
             <audio
               ref={songRef}
               defaultValue={rangeValue}
@@ -117,7 +117,7 @@ const MusicPlayer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className='flex items-center gap-x-3 px-2'></div>
+      <div className='flex items-center gap-x-3 px-2' />
     </div>
   );
 };

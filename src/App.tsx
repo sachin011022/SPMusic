@@ -14,7 +14,7 @@ function App() {
   return (
     <div className='flex items-center justify-center w-screen h-screen'>
       <Container>
-        <div className='flex flex-col w-full h-full gap-2'>
+        <div className='flex flex-col w-full h-full gap-2 relative'>
           <div className='flex items-center gap-2'>
             <div className='md:w-[78px] lg:w-[351px] hidden md:block lg:block h-full'>
               <LeftSidebar />

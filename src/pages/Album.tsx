@@ -52,7 +52,7 @@ function Album() {
                 </div>
               ) : (
                 <div className='w-full h-[43vh]  p-7'>
-                  <div className='w-[14vw] h-[28vh] '>
+                  <div className='w-[42vw] h-[28vh] md:w-[28vw] md:h-[36vh] lg:w-[20vw] lg:h-[28vh] '>
                     <img
                       src={data?.cover_medium || logo}
                       alt=''

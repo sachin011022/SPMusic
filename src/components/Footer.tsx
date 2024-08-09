@@ -34,7 +34,7 @@ function Footer() {
     },
   ];
   return (
-    <div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 mt-3 px-6 py-2 gap-2'>
+    <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 mt-3 px-6 py-2 gap-2'>
       {footerItem.map((item, index) => (
         <div key={index} className='flex flex-col'>
           <h1 className='font-bold text-slate-50 text-xl'>{item.heading}</h1>
