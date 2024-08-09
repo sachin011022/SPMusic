@@ -16,7 +16,7 @@ function Card({ searchValue, isLoading }: cardProps) {
             className='flex items-center justify-center animate-spin w-full'
           />
         ) : (
-          <div className=' w-full grid grid-cols-5 place-items-center '>
+          <div className=' w-full grid lg:grid-cols-5 place-items-center sm:grid-cols-2 md:grid-cols-3 '>
             {searchValue.map((value) => {
               return (
                 <div
