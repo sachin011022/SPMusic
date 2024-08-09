@@ -1,5 +1,5 @@
 export interface PlayerState {
-  currentSongs: any[];
+  currentSongs: any;
   currentIndex: number;
   isActive: boolean;
   isPlaying: boolean;

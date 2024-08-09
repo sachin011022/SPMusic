@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import SongContext, { initialState } from "./SongContext";
-import useMusicPlayer from "./useMusicPlayer";
 import { useNavigate } from "react-router-dom";
 import { PlayerState } from "@/types";
 
