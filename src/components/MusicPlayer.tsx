@@ -111,7 +111,7 @@ const MusicPlayer: React.FC = () => {
               value={currentTime}
               onChange={handleRangeChange}
               step={0.001}
-              className='w-[400px] cursor-pointer'
+              className='lg:w-[400px] w-[280px] cursor-pointer'
             />
             <p>{formatTime(duration)}</p>
           </div>
